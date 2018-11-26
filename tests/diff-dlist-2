@@ -1,0 +1,84 @@
+7c7
+< Total memory used: 0.1289 M Bytes
+---
+> Total memory used: 0.1406 M Bytes
+16c16
+< Total memory used: 0.1289 M Bytes
+---
+> Total memory used: 0.1445 M Bytes
+25c25
+< Total memory used: 0.1289 M Bytes
+---
+> Total memory used: 0.1445 M Bytes
+32c32
+< Total memory used: 0.1289 M Bytes
+---
+> Total memory used: 0.1445 M Bytes
+41c41
+< Total memory used: 0.1406 M Bytes
+---
+> Total memory used: 0.1445 M Bytes
+50c50
+< Total memory used: 0.1406 M Bytes
+---
+> Total memory used: 0.1445 M Bytes
+57,59c57,59
+< Period time used : 0.01 seconds
+< Total time used  : 0.01 seconds
+< Total memory used: 2.473 M Bytes
+---
+> Period time used : 0 seconds
+> Total time used  : 0 seconds
+> Total memory used: 2.512 M Bytes
+12566c12566
+< Period time used : 0.02 seconds
+---
+> Period time used : 0.03 seconds
+12568c12568
+< Total memory used: 2.488 M Bytes
+---
+> Total memory used: 2.52 M Bytes
+22577,22579c22577,22579
+< Period time used : 1.03 seconds
+< Total time used  : 1.06 seconds
+< Total memory used: 2.488 M Bytes
+---
+> Period time used : 0.61 seconds
+> Total time used  : 0.64 seconds
+> Total memory used: 2.52 M Bytes
+22584,22586c22584,22586
+< Period time used : 7.01 seconds
+< Total time used  : 8.07 seconds
+< Total memory used: 2.488 M Bytes
+---
+> Period time used : 11.34 seconds
+> Total time used  : 11.98 seconds
+> Total memory used: 2.52 M Bytes
+32593,32595c32593,32595
+< Period time used : 0.03 seconds
+< Total time used  : 8.1 seconds
+< Total memory used: 2.488 M Bytes
+---
+> Period time used : 0.02 seconds
+> Total time used  : 12 seconds
+> Total memory used: 2.52 M Bytes
+32600,32602c32600,32602
+< Period time used : 2.47 seconds
+< Total time used  : 10.57 seconds
+< Total memory used: 2.488 M Bytes
+---
+> Period time used : 0.56 seconds
+> Total time used  : 12.56 seconds
+> Total memory used: 2.52 M Bytes
+32608,32609c32608,32609
+< Total time used  : 10.57 seconds
+< Total memory used: 2.488 M Bytes
+---
+> Total time used  : 12.56 seconds
+> Total memory used: 2.52 M Bytes
+40117,40118c40117,40118
+< Total time used  : 10.59 seconds
+< Total memory used: 2.488 M Bytes
+---
+> Total time used  : 12.58 seconds
+> Total memory used: 2.52 M Bytes

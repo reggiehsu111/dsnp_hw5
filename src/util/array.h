@@ -110,10 +110,7 @@ public:
 
    bool erase(iterator pos) {
       if (pos._node){
-         while(pos!=end()){
-            *pos._node = *((pos+1)._node);
-            pos ++;
-         }
+         *pos._node = _data[_size-1];
          _size--;
          return true;
       }

@@ -45,7 +45,7 @@ adt> adtp
 adt> usage
 Period time used : 0 seconds
 Total time used  : 0 seconds
-Total memory used: 0.1836 M Bytes
+Total memory used: 0.1875 M Bytes
 
 adt> adta -s 123
 
@@ -96,7 +96,7 @@ adt> adtp
 adt> usage
 Period time used : 0 seconds
 Total time used  : 0 seconds
-Total memory used: 0.1992 M Bytes
+Total memory used: 0.1953 M Bytes
 
 adt> q -f
 

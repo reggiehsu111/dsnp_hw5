@@ -1,0 +1,52 @@
+10c10
+< === ADT (array) ===
+---
+> === ADT (dlist) ===
+17c17
+< === ADT (array) ===
+---
+> === ADT (dlist) ===
+23c23
+< === ADT (array) ===
+---
+> === ADT (dlist) ===
+29c29
+< === ADT (array) ===
+---
+> === ADT (dlist) ===
+35c35
+< === ADT (array) ===
+---
+> === ADT (dlist) ===
+42c42
+< === ADT (array) ===
+---
+> === ADT (dlist) ===
+48c48
+< Total memory used: 0.1641 M Bytes
+---
+> Total memory used: 0.1602 M Bytes
+61c61
+< === ADT (array) ===
+---
+> === ADT (dlist) ===
+68c68
+< === ADT (array) ===
+---
+> === ADT (dlist) ===
+74c74
+< === ADT (array) ===
+---
+> === ADT (dlist) ===
+80c80
+< === ADT (array) ===
+---
+> === ADT (dlist) ===
+86c86
+< === ADT (array) ===
+---
+> === ADT (dlist) ===
+93c93
+< === ADT (array) ===
+---
+> === ADT (dlist) ===
