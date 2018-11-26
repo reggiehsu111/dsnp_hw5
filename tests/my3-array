@@ -1,0 +1,104 @@
+adt> adta -s jordan
+
+adt> adtp
+=== ADT (array) ===
+[  0] = jordan   
+
+adt> adta -s jordano
+
+adt> adtp
+=== ADT (array) ===
+[  0] = jordan   [  1] = jordan   
+
+adt> adta -s jorda
+
+adt> adtp
+=== ADT (array) ===
+[  0] = jordan   [  1] = jordan   [  2] = jorda   
+
+adt> adta -s jordan
+
+adt> adtp
+=== ADT (array) ===
+[  0] = jordan   [  1] = jordan   [  2] = jorda   [  3] = jordan   
+
+
+adt> adta -s jordana
+
+adt> adtp
+=== ADT (array) ===
+[  0] = jordan   [  1] = jordan   [  2] = jorda   [  3] = jordan   
+[  4] = jordan   
+
+adt> adtd -s jordani
+
+adt> adtp
+=== ADT (array) ===
+[  0] = jordan   [  1] = jorda   [  2] = jordan   [  3] = jordan   
+
+
+adt> adtd -s jord
+Error: "jord" is not found!
+
+adt> adtp
+=== ADT (array) ===
+[  0] = jordan   [  1] = jorda   [  2] = jordan   [  3] = jordan   
+
+
+adt> adta -r 30
+
+adt> adtp
+=== ADT (array) ===
+[  0] = jordan   [  1] = jorda   [  2] = jordan   [  3] = jordan   
+[  4] = yoqgwq   [  5] = pyhoqj   [  6] = hvvrrb   [  7] = poklhg   
+[  8] = jemxun   [  9] = stcizy   [ 10] = ypxgeo   [ 11] = qljlcb   
+[ 12] = mspxew   [ 13] = enaqkv   [ 14] = ecoglo   [ 15] = csoxla   
+[ 16] = qgtarv   [ 17] = cxoljg   [ 18] = gfpjgn   [ 19] = iflkun   
+[ 20] = diyhes   [ 21] = argrrf   [ 22] = uudifm   [ 23] = olrevy   
+[ 24] = sedeoy   [ 25] = rshpzm   [ 26] = iadorv   [ 27] = ulpxuv   
+[ 28] = jihbnd   [ 29] = zfhdkv   [ 30] = cbnjqm   [ 31] = hbnyui   
+[ 32] = uhqkfk   [ 33] = jogjjw   
+
+adt> adtd -front 5
+
+adt> adtp
+=== ADT (array) ===
+[  0] = pyhoqj   [  1] = hvvrrb   [  2] = poklhg   [  3] = jemxun   
+[  4] = stcizy   [  5] = ypxgeo   [  6] = qljlcb   [  7] = mspxew   
+[  8] = enaqkv   [  9] = ecoglo   [ 10] = csoxla   [ 11] = qgtarv   
+[ 12] = cxoljg   [ 13] = gfpjgn   [ 14] = iflkun   [ 15] = diyhes   
+[ 16] = argrrf   [ 17] = uudifm   [ 18] = olrevy   [ 19] = sedeoy   
+[ 20] = rshpzm   [ 21] = iadorv   [ 22] = ulpxuv   [ 23] = jihbnd   
+[ 24] = zfhdkv   [ 25] = cbnjqm   [ 26] = hbnyui   [ 27] = uhqkfk   
+[ 28] = jogjjw   
+
+adt> adtd -back 5
+
+adt> adtp
+=== ADT (array) ===
+[  0] = pyhoqj   [  1] = hvvrrb   [  2] = poklhg   [  3] = jemxun   
+[  4] = stcizy   [  5] = ypxgeo   [  6] = qljlcb   [  7] = mspxew   
+[  8] = enaqkv   [  9] = ecoglo   [ 10] = csoxla   [ 11] = qgtarv   
+[ 12] = cxoljg   [ 13] = gfpjgn   [ 14] = iflkun   [ 15] = diyhes   
+[ 16] = argrrf   [ 17] = uudifm   [ 18] = olrevy   [ 19] = sedeoy   
+[ 20] = rshpzm   [ 21] = iadorv   [ 22] = ulpxuv   [ 23] = jihbnd   
+
+
+adt> adtd -r 5
+
+adt> adtp
+=== ADT (array) ===
+[  0] = pyhoqj   [  1] = hvvrrb   [  2] = poklhg   [  3] = jemxun   
+[  4] = stcizy   [  5] = ypxgeo   [  6] = qljlcb   [  7] = mspxew   
+[  8] = csoxla   [  9] = qgtarv   [ 10] = cxoljg   [ 11] = gfpjgn   
+[ 12] = iflkun   [ 13] = diyhes   [ 14] = argrrf   [ 15] = sedeoy   
+[ 16] = rshpzm   [ 17] = ulpxuv   [ 18] = jihbnd   
+
+adt> adtd -all
+
+adt> adtp
+=== ADT (array) ===
+
+
+adt> q -f
+

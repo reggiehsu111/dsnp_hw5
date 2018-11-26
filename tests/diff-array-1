@@ -1,0 +1,38 @@
+5,9c5,9
+< [  0] = gpcbgx   [  1] = pwubvx   [  2] = oolqqs   [  3] = jqsvhi   
+< [  4] = nvhizi   [  5] = jemxun   [  6] = stcizy   [  7] = ypxgeo   
+< [  8] = qljlcb   [  9] = yfchfb   [ 10] = mulrct   [ 11] = aonvnx   
+< [ 12] = cqfndd   [ 13] = csoxla   [ 14] = pjgrrm   [ 15] = segevj   
+< [ 16] = xvylrl   [ 17] = taogab   [ 18] = lujbfo   [ 19] = mldgzt   
+---
+> [  0] = gpcbgx   [  1] = pyhoqj   [  2] = hvvrrb   [  3] = poklhg   
+> [  4] = jemxun   [  5] = stcizy   [  6] = ypxgeo   [  7] = qljlcb   
+> [  8] = mspxew   [  9] = enaqkv   [ 10] = ecoglo   [ 11] = fjdcqh   
+> [ 12] = qgtarv   [ 13] = bdoras   [ 14] = nefovq   [ 15] = itcohg   
+> [ 16] = mknpnd   [ 17] = argrrf   [ 18] = uudifm   [ 19] = olrevy   
+16,20c16,20
+< [  0] = taogab   [  1] = pwubvx   [  2] = oolqqs   [  3] = jqsvhi   
+< [  4] = nvhizi   [  5] = jemxun   [  6] = stcizy   [  7] = ypxgeo   
+< [  8] = qljlcb   [  9] = yfchfb   [ 10] = mulrct   [ 11] = aonvnx   
+< [ 12] = cqfndd   [ 13] = csoxla   [ 14] = pjgrrm   [ 15] = segevj   
+< [ 16] = xvylrl   
+---
+> [  0] = poklhg   [  1] = jemxun   [  2] = stcizy   [  3] = ypxgeo   
+> [  4] = qljlcb   [  5] = mspxew   [  6] = enaqkv   [  7] = ecoglo   
+> [  8] = fjdcqh   [  9] = qgtarv   [ 10] = bdoras   [ 11] = nefovq   
+> [ 12] = itcohg   [ 13] = mknpnd   [ 14] = argrrf   [ 15] = uudifm   
+> [ 16] = olrevy   
+26,28c26,28
+< [  0] = taogab   [  1] = pwubvx   [  2] = oolqqs   [  3] = jqsvhi   
+< [  4] = nvhizi   [  5] = jemxun   [  6] = stcizy   [  7] = ypxgeo   
+< [  8] = qljlcb   [  9] = yfchfb   [ 10] = mulrct   [ 11] = aonvnx   
+---
+> [  0] = poklhg   [  1] = jemxun   [  2] = stcizy   [  3] = ypxgeo   
+> [  4] = qljlcb   [  5] = mspxew   [  6] = enaqkv   [  7] = ecoglo   
+> [  8] = fjdcqh   [  9] = qgtarv   [ 10] = bdoras   [ 11] = nefovq   
+35,36c35,36
+< [  0] = qljlcb   [  1] = pwubvx   [  2] = oolqqs   [  3] = yfchfb   
+< [  4] = nvhizi   [  5] = jemxun   [  6] = mulrct   [  7] = ypxgeo   
+---
+> [  0] = poklhg   [  1] = qljlcb   [  2] = mspxew   [  3] = enaqkv   
+> [  4] = ecoglo   [  5] = qgtarv   [  6] = bdoras   [  7] = nefovq   
