@@ -191,7 +191,7 @@ public:
       }
    }  // delete all nodes except for the dummy node
 
-   void sort() { 
+   void sort() const{ 
       // return if is sorted or link list only contains 1 element
       if (_isSorted || size()<=1) return;
       else{
@@ -217,7 +217,7 @@ private:
    mutable bool   _isSorted; // (optionally) to indicate the array is sorted
 
    // [OPTIONAL TODO] helper functions; called by public member functions
-   void swap_forth(DListNode<T>* tf) {
+   void swap_forth(DListNode<T>* tf) const{
       DListNode<T> *former = tf -> _prev, *tempnext = tf -> _next, *ff = former -> _prev;
       if(tf == _head->_next)
          return;

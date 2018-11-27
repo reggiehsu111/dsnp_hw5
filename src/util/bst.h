@@ -28,7 +28,7 @@ class BSTreeNode
 	friend class BSTree<T>::iterator;
 
 	BSTreeNode(const T& d, BSTreeNode<T>* p = NULL, BSTreeNode<T>* l = NULL, BSTreeNode<T>* r = NULL):
-	_data(d), _parent(p), _left(l), _right(r) {_height = 1;_duplicate=1;_pos=0;}
+	_data(d), _parent(p), _left(l), _right(r) {_height = 1;}
 	~BSTreeNode(){}
 
    T               _data;
@@ -36,8 +36,6 @@ class BSTreeNode
    BSTreeNode<T>*  _left;
    BSTreeNode<T>*  _right;
    size_t          _height;
-   size_t          _duplicate;    // number of instances of the same data
-   size_t          _pos;          // for iterator
 };
 
 
@@ -52,7 +50,7 @@ public:
    class iterator { 
    		friend class BSTree<T>;
    public:
-   		iterator(BSTreeNode<T>* n, BSTreeNode<T>* dummy = NULL):_node(n),_dummy(dummy){}
+   		iterator(BSTreeNode<T>* n):_node(n){}
    		iterator(const iterator& i) : _node(i._node) {}
    		~iterator() {}
    		const T& operator * () const { return _node->_data; }
@@ -89,10 +87,9 @@ public:
 
    	private:
    		BSTreeNode<T>* _node;
-   		BSTreeNode<T>* _dummy;
     };
     iterator begin() const { return iterator(_min); }
-    iterator end() const { return iterator(NULL,_max); }
+    iterator end() const { return iterator(NULL); }
     void sort(){return;}
     bool empty() const { return !_root;}
     size_t size() const { return _size;}
@@ -168,9 +165,9 @@ public:
 
 private:
 	BSTreeNode<T>*  _root;
-  	BSTreeNode<T>*  _min;
-  	BSTreeNode<T>*  _max;
-  	size_t _size;
+  BSTreeNode<T>*  _min;
+  BSTreeNode<T>*  _max;
+  size_t _size;
 
   	//helper functions:
   	static BSTreeNode<T>* successor(BSTreeNode<T>* node) {
@@ -207,10 +204,15 @@ private:
   		}
   	}
   	static BSTreeNode<T>* predecessor(BSTreeNode<T>* node) {
+      cout << "here" << endl;
+      // node is root
   		if (!node -> _parent){
+        cout << "node is root" << endl;
   			return node -> _left ? maxV(node -> _left):NULL;
   		}
+      // node it right child
   		if (node -> _parent -> _right == node){
+        cout << "right" << endl;
   			if (node -> _left){
   				BSTreeNode<T>* temp = maxV(node -> _left);
   				return (node -> _parent -> _data > temp -> _data) ? node -> _parent:temp;
@@ -218,6 +220,7 @@ private:
   			else return node -> _parent;
   		}
   		else {
+        cout << "left" << endl;
   			if (node -> _left){
   				return (maxV(node -> _left));
   			}
@@ -313,11 +316,11 @@ private:
     BSTreeNode<T>* insertNode(BSTreeNode<T>* node, const T& x, BSTreeNode<T>* parent=NULL){
     	if (!node){
     		BSTreeNode<T>* temp = new BSTreeNode<T>(x, parent);
-    		if (x < _min -> _data) _min = temp;
-    		if (x> _max -> _data) _max = temp;
+    		if (x <= _min -> _data) _min = temp;
+    		if (x > _max -> _data) _max = temp;
     		return temp;
     	}
-    	if (x < node -> _data)
+    	if (x <= node -> _data)
     		node -> _left = insertNode(node->_left,x,node);
     	else if (x > node -> _data)
     		node -> _right = insertNode(node->_right,x,node);
