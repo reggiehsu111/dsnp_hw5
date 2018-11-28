@@ -9,7 +9,7 @@ adtp
 adta -s jordana
 adtp
 adtd -s jordani
-adtp
+adtp -v
 adtd -s jord
 adtp
 adta -r 30

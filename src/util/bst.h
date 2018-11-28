@@ -44,13 +44,13 @@ class BSTree
 {
    // TODO: design your own class!!
 public:
-	BSTree():_root(NULL), _min(NULL), _max(NULL),_size(0){}
+	BSTree():_root(NULL), _min(NULL), _max(NULL),_size(0),_success_delete(true){}
 	~BSTree(){clear();delete _root;}
 	// implementation of iterator
    class iterator { 
    		friend class BSTree<T>;
    public:
-   		iterator(BSTreeNode<T>* n):_node(n){}
+   		iterator(BSTreeNode<T>* n, BSTreeNode<T>* d=NULL):_node(n),_dummy(d){}
    		iterator(const iterator& i) : _node(i._node) {}
    		~iterator() {}
    		const T& operator * () const { return _node->_data; }
@@ -66,12 +66,17 @@ public:
 	        return temp;
 	    }
 	    iterator& operator -- () { 
+        if (!this -> _node) this -> _node = _dummy;
+        else
 	        this -> _node = BSTree<T>::predecessor(this -> _node);
-	        return *this; 
+        return *this; 
       	}
-      	iterator operator--(int) {
-	        iterator temp = *this;
+      iterator operator--(int) {
+        iterator temp = *this;
+        if (!this -> _node) this -> _node = _dummy;
+        else{
 	        this -> _node = BSTree<T>::predecessor(this -> _node);
+        }
 	        return temp;
 	    }
 	    iterator& operator=(const iterator& i) {
@@ -87,9 +92,10 @@ public:
 
    	private:
    		BSTreeNode<T>* _node;
+      BSTreeNode<T>* _dummy;
     };
     iterator begin() const { return iterator(_min); }
-    iterator end() const { return iterator(NULL); }
+    iterator end() const { return iterator(NULL,_max); }
     void sort(){return;}
     bool empty() const { return !_root;}
     size_t size() const { return _size;}
@@ -114,9 +120,13 @@ public:
     		_min = _max = _root;
     	}
     	else{
-    		insertNode(_root,x);
+        BSTreeNode<T>* temp;
+    		temp = insertNode(_root,x);
+        cout << "stack: " << temp << endl;
+        cout << "after insertion" << endl;
 	   	}
 	   	_size++;
+      cout << "size: " << _size << endl;
 	   	return;
     }
     void clear(){
@@ -147,14 +157,22 @@ public:
     }
     bool erase(const T& x) { 
     	if (_root){
-    		if (deleteNode(_root,x)){
+        if (_root -> _data == x){
+          deleteNode(_root,x);
+          _size --;
+          _success_delete = true;
+          return true;
+        }
+    		if (deleteNode(_root,x) && _success_delete){
     			_size --;
     			return true;
     		}
     		else{
+          _success_delete = true;
 	    		return false;
     		}
     	}
+      _success_delete = true;
     	return false;
     }
     void print() const {
@@ -167,7 +185,8 @@ private:
 	BSTreeNode<T>*  _root;
   BSTreeNode<T>*  _min;
   BSTreeNode<T>*  _max;
-  size_t _size;
+  size_t          _size;
+  bool            _success_delete;    // for deleteNode()
 
   	//helper functions:
   	static BSTreeNode<T>* successor(BSTreeNode<T>* node) {
@@ -204,15 +223,12 @@ private:
   		}
   	}
   	static BSTreeNode<T>* predecessor(BSTreeNode<T>* node) {
-      cout << "here" << endl;
       // node is root
   		if (!node -> _parent){
-        cout << "node is root" << endl;
   			return node -> _left ? maxV(node -> _left):NULL;
   		}
       // node it right child
   		if (node -> _parent -> _right == node){
-        cout << "right" << endl;
   			if (node -> _left){
   				BSTreeNode<T>* temp = maxV(node -> _left);
   				return (node -> _parent -> _data > temp -> _data) ? node -> _parent:temp;
@@ -220,7 +236,6 @@ private:
   			else return node -> _parent;
   		}
   		else {
-        cout << "left" << endl;
   			if (node -> _left){
   				return (maxV(node -> _left));
   			}
@@ -318,7 +333,10 @@ private:
     		BSTreeNode<T>* temp = new BSTreeNode<T>(x, parent);
     		if (x <= _min -> _data) _min = temp;
     		if (x > _max -> _data) _max = temp;
-    		return temp;
+        cout << temp -> _data << endl;
+        cout << _root -> _data << endl;
+        cout << "heap: " << temp << endl;
+     		return temp;
     	}
     	if (x <= node -> _data)
     		node -> _left = insertNode(node->_left,x,node);
@@ -357,8 +375,10 @@ private:
     	else return node -> _height;
     }
 	BSTreeNode<T>* deleteNode(BSTreeNode<T>* node, T key){
-		if (!node) // can't find the node
+		if (!node){ // can't find the node
+      _success_delete = false;
 			return node;
+    }
 		if (key < node -> _data)
 			node -> _left = deleteNode(node -> _left, key);
 		else if (key > node -> _data)
@@ -370,6 +390,8 @@ private:
 				if (!temp){ // no child case
 					if (_min -> _data == key) _min = successor(node);
 					if (_max -> _data == key) _max = predecessor(node);
+          if (node == _root)
+            _root = NULL;
 					delete node;
  					node = temp;
 				}
@@ -377,9 +399,11 @@ private:
 					if (_min -> _data == key) _min = successor(node);
 					if (_max -> _data == key) _max = predecessor(node);
 					temp -> _parent = node -> _parent;
-					if (node -> _parent -> _left == node)
+          if (!node -> _parent) // node is root
+            _root = temp;
+					else if (node -> _parent -> _left == node) // node is a left child
 						node -> _parent -> _left = temp;
-					else if (node -> _parent -> _right == node)
+					else if (node -> _parent -> _right == node) // node is a right child
 						node -> _parent -> _right = temp;
 					delete node;
 					node = temp;

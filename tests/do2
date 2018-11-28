@@ -11,7 +11,9 @@ usage
 adtp -r
 usage
 adtr 3
-adta -r 50000
+adta -r 6454
+adta -r 1
+q -f
 usage
 adtp
 usage
@@ -29,4 +31,3 @@ usage
 adtp
 usage
 q -f
-y
